@@ -1,40 +1,46 @@
+const seleniumServer = require("selenium-server");
+const chromedriver = require("chromedriver");
+require('babel-core/register');
+
 require('nightwatch-cucumber')({
-  /* other configuration options */
+  cucumberArgs: [
+    '--compiler', 'js:babel-core/register',
+    '--require', 'features/step_definitions',
+    'features'
+  ]
 })
 
 module.exports = {
-  src_folders: ['features'],
-  output_folder: 'reports',
-  custom_commands_path: '',
-  custom_assertions_path: '',
-  page_objects_path: '',
-  globals_path: '',
-
-  selenium: {
-    start_process: true,
-    server_path: './node_modules/selenium-standalone/.selenium/selenium-server/3.12.0-server.jar',
-    log_path: './reports',
-    host: '127.0.0.1',
-    port: 4444,
-    cli_args: {
-      'webdriver.chrome.driver': './node_modules/selenium-standalone/.selenium/chromedriver/2.40-x64-chromedriver',
-    },
+  src_folders: 'features',
+  "output_folder": "./reports",
+  "selenium": {
+    "start_process": true,
+    "server_path": seleniumServer.path,
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+      'webdriver.chrome.driver' : chromedriver.path
+    }
   },
   test_settings: {
     default: {
       launch_url: 'http://localhost:3000',
-      selenium_port: 4444,
-      silent: true,
       screenshots: {
-        enabled: false,
-        path: '',
+        enabled: true,
+        path: './reports/screenshots',
+      },
+      globals: {
+        waitForConditionTimeout: 5000,
       },
       desiredCapabilities: {
         browserName: 'chrome',
-        chromeOptions: {
-          args: ['window-size=1440,900'],
-        },
-      },
+      }
     },
-  },
+    chrome: {
+      desiredCapabilities: {
+        browserName: 'chrome',
+        javascriptEnabled: true,
+      }
+    }
+  }
 };
