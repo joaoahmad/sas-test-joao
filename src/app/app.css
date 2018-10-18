@@ -4,3 +4,11 @@
   width: 100%;
   grid-template-columns: 1fr 2fr;
 }
+
+.app-list {
+  background: #e9e9e9;
+}
+
+.app-main {
+  background: #f1f1f1;
+}

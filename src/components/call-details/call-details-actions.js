@@ -11,7 +11,7 @@ async (dispatch: Function, getState: Function) => {
 
 		if (response.ok) {
 			const payload = await response.json();
-			dispatch({ type: types('SET_CALLS_DETAILS'), payload });
+			dispatch({ type: types('SET_CALL_DETAILS'), payload });
 		} else {
 			logError(response.statusText);
 		}

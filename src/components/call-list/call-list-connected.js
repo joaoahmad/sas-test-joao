@@ -7,9 +7,11 @@ const dispatchToProps = {
 }
 
 const mapStateToProps = (state) => {
-	console.log(state);
 	const { isLoading, callsCollection } = state.call.list;
-	const calls = (callsCollection || []);
+	const calls = (callsCollection || [])
+	.sort((a, b) => (new Date(b.created_at) - new Date(a.created_at)));
+
+	console.log(calls);
 
 	return {
 		isLoading,

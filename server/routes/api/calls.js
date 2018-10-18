@@ -5,7 +5,7 @@ module.exports.add = (req, res) => {
     call.save((err) => {
         if (err) res.send(err);
 
-        return res.json(req.body);
+        return res.json(call);
     });
 };
 

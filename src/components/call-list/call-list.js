@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './call-list.css';
 
 type Props = {
@@ -19,21 +20,35 @@ class CallList extends Component<Props> {
   }
 
   renderCall(call) {
-    const { id, type, reasosn, state, description } = call;
+    const { _id, type, reason, state, description } = call;
     return (
-      <div className='call-list-item' key={id}>
+      <Link to={`/calls/${_id}`} className='call-list-item' key={_id}>
         <div className='call-list-item-header'>
-
+          {type}
+        </div>
+        <div className='call-list-item-header'>
+          {reason}
+        </div>
+        <div className='call-list-item-header'>
+          {state}
         </div>
         <div className='call-list-item-description'>
-
+          {description}
         </div>
-      </div>
+      </Link>
     )
   }
 
   render() {
     const { calls, isLoading } = this.props;
+
+    if (isLoading) {
+      return (
+        <div>
+          loading...
+        </div>
+      )
+    }
 
     return (
       <div className='call-list'>

@@ -19,8 +19,17 @@ const callsCollection = (state = initialState, action) => {
 
 		case types('SET_CALLS'): return {
 			...state,
-			calls: action.payload,
+			callsCollection: action.payload,
 		}
+
+		case types('SET_NEW_CALL'): return {
+			...state,
+			callsCollection: [
+				...state.callsCollection,
+				action.payload,
+			],
+		}
+
 		default: return state
 	}
 }

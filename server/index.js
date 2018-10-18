@@ -4,8 +4,8 @@ const path = require('path');
 const api = require('./routes/api');
 const app = express();
 
-const mongoose   = require('mongoose');
-mongoose.connect('mongodb://joker:jp@ds023088.mlab.com:23088/dessolencia');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://hastur:jp010101@ds135433.mlab.com:35433/sas-test', { useNewUrlParser: true });
 
 app.use(express.static(path.join(__dirname, 'build')));
 app.use(bodyParser());

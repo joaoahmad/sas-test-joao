@@ -7,6 +7,11 @@ var CallSchema = new Schema({
     description: String,
     state: String,
     operator: String,
+}, {
+  timestamps: {
+    createdAt: 'created_at',
+    updatedAt: false,
+  },
 });
 
 module.exports = mongoose.model('Call', CallSchema);
