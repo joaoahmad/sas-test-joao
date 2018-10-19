@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import classnames from 'classnames';
+import map from 'lodash/map';
 import reasonColor from '../../utils/reason-color';
 import './call-list.css';
 
@@ -20,18 +21,6 @@ class CallList extends Component<Props> {
 
   componentDidMount() {
     this.props.loadCalls();
-  }
-
-  getReasonColor(reason) {
-    switch (reason) {
-      case 'Dúvidas': return 'blue'
-      case 'Elogios': return 'green'
-      case 'Sugestões': return 'yellow'
-      case 'Reclamações': return 'red'
-      case 'Outros': return 'gray'
-
-      default: return 'gray'
-    }
   }
 
   renderCall(call) {
@@ -64,6 +53,17 @@ class CallList extends Component<Props> {
   )
 }
 
+renderGroup(calls, key) {
+  return (
+    <div className='call-list-group' key={key}>
+      <div className='call-list-group-title'>{key}</div>
+      <div className='call-list-group-list'>
+        {calls.map(this.renderCall, this)}
+      </div>
+    </div>
+  )
+}
+
 render() {
   const { calls, isLoading } = this.props;
 
@@ -77,7 +77,7 @@ render() {
 
   return (
     <div className='call-list'>
-      {calls.map(this.renderCall, this)}
+      {map(calls, this.renderGroup.bind(this))}
     </div>
   );
 }

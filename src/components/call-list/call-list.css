@@ -7,7 +7,7 @@
 .call-list-item {
   padding: 18px 20px;
   background: rgba(0,0,0,.2);
-  margin: 0 0 10px;
+  margin: 10px 0 0;
   transition: 0.1s ease-out;
   font-size: 14px;
   border-radius: 2px;
@@ -106,4 +106,16 @@
 .call-list-item-description {
   opacity: 0.4;
   margin-top: 10px;
+}
+
+
+.call-list-group {
+  margin-bottom: 30px;
+}
+
+.call-list-group-title {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: .6;
 }
