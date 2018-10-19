@@ -1,5 +1,7 @@
 // @flow
 import React, { Component } from 'react';
+import moment from 'moment';
+import DisplayField from '../display-field/display-field';
 import './call-details.css';
 
 type Props = {
@@ -35,6 +37,7 @@ class CallDetails extends Component<Props> {
 
   render() {
     const { isLoading, call } = this.props;
+    const { _id, operator, state, reason, type, description, created_at } = call;
 
     if (isLoading) {
       return (
@@ -46,12 +49,13 @@ class CallDetails extends Component<Props> {
 
     return (
       <div className='call-details'>
-        <div>{call._id}</div>
-        <div>{call.operator}</div>
-        <div>{call.state}</div>
-        <div>{call.reason}</div>
-        <div>{call.type}</div>
-        <div>{call.description}</div>
+        <h1>Atendimento <span>ID: {_id}</span></h1>
+        <DisplayField label='Data' value={moment(created_at).format('DD/MM/YYYY HH:mm:ss')} />
+        <DisplayField label='Motivo do chamado' value={reason} />
+        <DisplayField label='Tipo de chamado' value={type} />
+        <DisplayField label='Estado' value={state} />
+        <DisplayField label='Atendente' value={operator} />
+        <DisplayField label='Detalhes' value={description} />
       </div>
     );
   }

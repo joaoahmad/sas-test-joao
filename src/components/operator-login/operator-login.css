@@ -1,0 +1,33 @@
+.operator-login {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+}
+
+.operator-login-modal {
+  background: #fff;
+  padding: 36px 40px;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 360px;
+}
+
+.operator-login h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+  text-align: center;
+}
+
+.operator-login p {
+  font-size: 16px;
+  margin: 0 0 20px;
+  text-align: center;
+}

@@ -8,7 +8,8 @@ const mongoose = require('mongoose');
 mongoose.connect('mongodb://hastur:jp010101@ds135433.mlab.com:35433/sas-test', { useNewUrlParser: true });
 
 app.use(express.static(path.join(__dirname, 'build')));
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use('/api', api)
 

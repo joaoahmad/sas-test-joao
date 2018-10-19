@@ -5,6 +5,7 @@ import { createCall } from './new-call-actions';
 import NewCall from './new-call';
 
 const onSubmit = (data, dispatch) => {
+	console.log(data);
 	dispatch(createCall(data));
 }
 
@@ -13,7 +14,15 @@ const validate = (vaues) => {
 	return erros;
 }
 
-const mapStateToProps = (state) => ({})
+const mapStateToProps = ({ operator: { operator_name } }) => ({
+	initialValues: {
+		operator: operator_name,
+		reason: 'Dúvidas',
+		type: 'Telefone',
+		state: 'RJ',
+	},
+	operator_name,
+});
 
 export default compose(
 	connect(mapStateToProps),

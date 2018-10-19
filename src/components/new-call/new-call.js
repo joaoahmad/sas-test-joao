@@ -10,31 +10,40 @@ class NewCall extends Component {
     const { handleSubmit } = this.props;
     return (
       <div className='new-call'>
+        <h1>Novo Chamado</h1>
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className='form-row'>
+            <label>Atendente</label>
+            <Input name='operator' component='input' type='text' disabled />
+          </div>
+          <div className='form-row'>
+            <label>Motivo do Chamado</label>
+            <Input name='reason' component='select'>
+              <option>Dúvidas</option>
+              <option>Elogios</option>
+              <option>Sugestões</option>
+              <option>Reclamações</option>
+              <option>Outros</option>
+            </Input>
+          </div>
+          <div className='form-row'>
+            <label>Tipo de Chamado</label>
             <Input name='type' component='select'>
               <option>Telefone</option>
               <option>Chat</option>
               <option>Email</option>
             </Input>
           </div>
-          <div>
+          <div className='form-row'>
+            <label>Estado</label>
             <Input name='state' component='select'>
               {brazilStates.map((state) => <option key={state}>{state}</option>)}
             </Input>
           </div>
-          <div>
-            <Input name='reason' component='select'>
-              <option>Dúvidas</option>
-              <option>Elogios</option>
-              <option>Sugestões</option>
-              <option>Outro</option>
-            </Input>
+          <div className='form-row'>
+            <label>Detalhes</label>
+            <Input name='description' component='textarea' />
           </div>
-          <Input
-            name='description'
-            component='textarea'
-          />
           <Button type='submit'>Enviar</Button>
         </form>
       </div>

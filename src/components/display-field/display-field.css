@@ -1,0 +1,17 @@
+.display-field {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.display-field-label {
+  width: 100%;
+  max-width: 160px;
+  font-weight: 600;
+  opacity: .4;
+}
+
+.display-field-value {
+
+}

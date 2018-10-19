@@ -1,10 +1,26 @@
+// @flow
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import classnames from 'classnames';
 import './button.css';
 
-class Button extends Component {
+type Props = {
+  type: String,
+  color: String
+}
+
+class Button extends Component<Props> {
   render() {
+    const { type, color, className } = this.props;
+    const ButtonComponent = type === 'link' ? Link : 'button';
+    const classes = classnames('button', {
+      [`button--${color}`]: color,
+    }, className);
+
+    console.log(classes);
+
     return (
-      <button className='button' {...this.props} />
+      <ButtonComponent {...this.props} className={classes} />
     );
   }
 }

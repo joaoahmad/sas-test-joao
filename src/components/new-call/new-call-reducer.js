@@ -16,9 +16,9 @@ const callDetails = (state = initialState, action) => {
 			...state,
 			isLoading: false
 		}
-		
+
 		default: return state
 	}
 }
 
-export default callDetails
+export default callDetails;

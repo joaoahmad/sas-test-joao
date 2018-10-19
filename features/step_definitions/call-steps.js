@@ -1,5 +1,5 @@
-const { client } = require('nightwatch-cucumber');
-const { Given, Then, When } = require('cucumber');
+import { client } from 'nightwatch-cucumber';
+import { Given, Then, When } from 'cucumber';
 
 Given('the browser is at home page', async () => {
   await client.url(client.launch_url);

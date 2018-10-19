@@ -2,13 +2,27 @@
   display: grid;
   height: 100vh;
   width: 100%;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: .25fr 1fr 1.5fr;
+}
+
+.app-navigation {
+  background: #6236b4;
+  background-image: linear-gradient(10deg, #6236b4, #663a95);
 }
 
 .app-list {
-  background: #e9e9e9;
+  background: #7440d5;
+  background-image: linear-gradient(10deg, #7440d5, #7443aa);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-main {
-  background: #f1f1f1;
+  background: #fff;
+  padding: 40px;
+}
+
+.app-list .button-new {
+  margin-left: auto;
 }
