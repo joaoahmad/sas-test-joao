@@ -17,8 +17,6 @@ class Button extends Component<Props> {
       [`button--${color}`]: color,
     }, className);
 
-    console.log(classes);
-
     return (
       <ButtonComponent {...this.props} className={classes} />
     );

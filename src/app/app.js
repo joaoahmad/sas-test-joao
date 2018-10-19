@@ -9,10 +9,6 @@ import Navigation from '../components/navigation/navigation';
 import Button from '../components/button/button';
 import './app.css';
 
-// const menu = [
-//   { url: '/', label: 'Home' }
-// ]
-
 class App extends Component {
   render() {
     return (

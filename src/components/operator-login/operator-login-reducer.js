@@ -1,7 +1,7 @@
 import types from '../../constants/types';
 
 const initialState = {
-	operator_name: 'Joao',
+	operator_name: null,
 }
 
 const operator = (state = initialState, action) => {

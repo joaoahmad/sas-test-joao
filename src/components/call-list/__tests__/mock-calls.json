@@ -1,0 +1,79 @@
+{
+    "19/10/2018 - MA": [
+        {
+            "_id": "5bc9eb6c91706b7e88d56109",
+            "operator": "Joao",
+            "reason": "Dúvidas",
+            "type": "Telefone",
+            "state": "MA",
+            "description": "Lorem ipsum",
+            "created_at": "2018-10-19T14:34:20.739Z",
+            "__v": 0
+        }
+    ],
+    "19/10/2018 - AC": [
+        {
+            "_id": "5bc9eb6191706b7e88d56108",
+            "operator": "Joao",
+            "reason": "Dúvidas",
+            "type": "Telefone",
+            "state": "AC",
+            "description": "Lorem ipsum",
+            "created_at": "2018-10-19T14:34:09.059Z",
+            "__v": 0
+        }
+    ],
+    "19/10/2018 - RJ": [
+        {
+            "_id": "5bc9e86b968a8375d4c52e7f",
+            "operator": "Joao",
+            "reason": "Outros",
+            "type": "Telefone",
+            "state": "RJ",
+            "created_at": "2018-10-19T14:21:31.469Z",
+            "__v": 0
+        },
+        {
+            "_id": "5bc9d41d47dac9268d0caf67",
+            "operator": "Joao",
+            "reason": "Elogios",
+            "type": "Chat",
+            "state": "RJ",
+            "description": "Lorem ipsum dolor sit amet, consectetur",
+            "created_at": "2018-10-19T12:54:53.055Z",
+            "__v": 0
+        }
+    ],
+    "19/10/2018 - undefined": [
+        {
+            "_id": "5bc9e855aa1fe675830db24a",
+            "operator": "Joao",
+            "reason": "Dúvidas",
+            "type": "Telefone",
+            "created_at": "2018-10-19T14:21:09.274Z",
+            "__v": 0
+        }
+    ],
+    "19/10/2018 - SP": [
+        {
+            "_id": "5bc9d7d431863e31a99ec2bb",
+            "operator": "Joao",
+            "type": "Email",
+            "state": "SP",
+            "reason": "Reclamações",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini",
+            "created_at": "2018-10-19T13:10:44.315Z",
+            "__v": 0
+        },
+        {
+            "_id": "5bc9d7c931863e31a99ec2ba",
+            "operator": "Joao",
+            "type": "Telefone",
+            "state": "SP",
+            "reason": "Elogios",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
+            "created_at": "2018-10-19T13:10:33.883Z",
+            "__v": 0
+        }
+    ]
+}

@@ -43,45 +43,43 @@ class CallList extends Component<Props> {
             <div className='call-list-item-header-right'>
               <time className='call-list-item-date'>
                 <span>{moment(created_at).format('DD/MM/YYYY')}</span>
-                <span>{moment(created_at).format('HH:mm')}</span>
               </time>
             </div>
           </div>
           <div className='call-list-item-description'>{description}</div>
         </Link>
-    </article>
-  )
-}
+      </article>
+    )
+  }
 
-renderGroup(calls, key) {
-  return (
-    <div className='call-list-group' key={key}>
-      <div className='call-list-group-title'>{key}</div>
-      <div className='call-list-group-list'>
-        {calls.map(this.renderCall, this)}
-      </div>
-    </div>
-  )
-}
-
-render() {
-  const { calls, isLoading } = this.props;
-
-  if (isLoading) {
+  renderGroup(calls, key) {
     return (
-      <div>
-        loading...
+      <div className='call-list-group' key={key}>
+        <div className='call-list-group-title'>{key}</div>
+        <div className='call-list-group-list'>
+          {calls.map(this.renderCall, this)}
+        </div>
       </div>
     )
   }
 
-  return (
-    <div className='call-list'>
-      {map(calls, this.renderGroup.bind(this))}
-    </div>
-  );
-}
+  render() {
+    const { calls, isLoading } = this.props;
 
+    if (isLoading) {
+      return (
+        <div>
+          loading...
+        </div>
+      )
+    }
+
+    return (
+      <div className='call-list'>
+        {map(calls, this.renderGroup.bind(this))}
+      </div>
+    );
+  }
 }
 
 export default CallList;
