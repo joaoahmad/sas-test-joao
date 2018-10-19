@@ -5,7 +5,6 @@ import { createCall } from './new-call-actions';
 import NewCall from './new-call';
 
 const onSubmit = (data, dispatch) => {
-	console.log(data);
 	dispatch(createCall(data));
 }
 
@@ -28,6 +27,7 @@ export default compose(
 	connect(mapStateToProps),
 	reduxForm({
 		form: 'call-details',
+		enableReinitialize: true,
 		onSubmit,
 		validate,
 	})
