@@ -9,7 +9,6 @@
     "server": "nodemon ./server/",
     "dev": "concurrently --kill-others-on-fail \"npm start\" \"npm run server\"",
     "test": "react-scripts test",
-    "test:coverage": "react-scripts test --coverage",
     "test:e2e": "nightwatch"
   },
   "dependencies": {
