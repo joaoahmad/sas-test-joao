@@ -1,17 +1,17 @@
 # Smart Age - React Test App
-Calls registering App using React and MongoDB.
+Call register App using React and MongoDB.
 
 ## Installation
 ```
-npm i -g nodemon
-npm install
+npm i -g yarn nodemon
+yarn install
 ```
 
 ## Development
 Run all services in development mode.
 
 ```
-npm run dev
+yarn run dev
 ```
 
 App is running: http://localhost:3000
@@ -25,8 +25,8 @@ App is running: http://localhost:3000
 
 ```
 # unit tests using jest
-npm run test
+yarn run test
 
 # end-to-end tests using Nightwatch and Cucumber
-npm run test:e2e
+yarn run test:e2e
 ```
