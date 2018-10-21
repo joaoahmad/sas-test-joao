@@ -1,6 +1,6 @@
+require('babel-core/register');
 const seleniumServer = require("selenium-server");
 const chromedriver = require("chromedriver");
-require('babel-core/register');
 
 require('nightwatch-cucumber')({
   cucumberArgs: [
